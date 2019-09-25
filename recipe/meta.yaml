@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,14 +7,11 @@ package:
 
 source:
   url: https://github.com/cwida/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: f3ee08f5a9422e5122e95624cbde0c1ce33416533f3eba7ba9be0cb320d613bd
-  patches:
-    - 0001-Support-building-with-std-c-14.patch
-    - 0002-Only-include-pytest-runner-in-setup_requires-if-we-r.patch
+  sha256: 9acc16e535a708f2e490d6b289f1c0689811b91d6993b96163db35a374c7fd51
 
 build:
   number: 0
-  skip: true  # [win or py2k]
+  skip: true  # [win]
   script: "cd tools/pythonpkg && $PREFIX/bin/python setup.py install"
 
 requirements:

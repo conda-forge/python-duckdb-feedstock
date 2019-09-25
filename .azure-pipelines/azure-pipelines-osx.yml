@@ -10,6 +10,9 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
+      osx_python2.7:
+        CONFIG: osx_python2.7
+        UPLOAD_PACKAGES: True
       osx_python3.6:
         CONFIG: osx_python3.6
         UPLOAD_PACKAGES: True
@@ -71,6 +74,7 @@ jobs:
 
   - script: |
       source activate base
+      export GIT_BRANCH=$BUILD_SOURCEBRANCHNAME
       upload_package ./ ./recipe ./.ci_support/${CONFIG}.yaml
     displayName: Upload recipe
     env:
