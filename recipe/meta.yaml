@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/cwida/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 9acc16e535a708f2e490d6b289f1c0689811b91d6993b96163db35a374c7fd51
+  sha256: 4c0bc6778049312f35ad2ec5360d9ebb6e43025c2720d71f328b6bc0a751faed
 
 build:
   number: 0
