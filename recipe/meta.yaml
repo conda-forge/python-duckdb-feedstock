@@ -23,6 +23,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools_scm
     - numpy 1.16
     - pandas
   run:
