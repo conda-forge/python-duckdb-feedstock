@@ -10,7 +10,7 @@ source:
   sha256: 4c0bc6778049312f35ad2ec5360d9ebb6e43025c2720d71f328b6bc0a751faed
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   script: "cd tools/pythonpkg && SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} $PREFIX/bin/python setup.py install"
 
@@ -18,6 +18,7 @@ requirements:
   build:
     - cmake
     - ninja
+    - make
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
