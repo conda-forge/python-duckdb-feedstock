@@ -35,6 +35,10 @@ requirements:
 test:
   imports:
     - duckdb
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://www.duckdb.org/
