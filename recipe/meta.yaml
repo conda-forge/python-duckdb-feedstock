@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "0.1.3" %}
+{% set version = "0.1.4" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/cwida/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 5dd77d8d2c82cbecffb513934c40427c46355819379097b5a1061717e447f0eb
+  sha256: c6a778c66d2e9847bf4b7bb153c4180122fa45223563d90b6d712cfa3d962cc2
 
 build:
   number: 0
   skip: true  # [win]
-  script: "cd tools/pythonpkg && SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} $PREFIX/bin/python setup.py install"
+  script: cd tools/pythonpkg && SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} $PREFIX/bin/python setup.py install
 
 requirements:
   build:
@@ -45,7 +45,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'An Embeddable Analytical Database'
+  summary: An Embeddable Analytical Database
   description: |
     DuckDB is an embedded database designed to execute analytical SQL queries
     fast while embedded in another process. It is designed to be easy to
