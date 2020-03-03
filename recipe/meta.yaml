@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.5" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/cwida/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: c6a778c66d2e9847bf4b7bb153c4180122fa45223563d90b6d712cfa3d962cc2
+  sha256: 3c766b6667e2f359d1e19dfccbd1e43e9b4e5fb9dfe17f66fdb83c079ad088c6
 
 build:
   number: 0
