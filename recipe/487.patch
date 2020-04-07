@@ -1,0 +1,52 @@
+From 64dc1286d9700c49367239c40d6eec22043d840d Mon Sep 17 00:00:00 2001
+From: "Uwe L. Korn" <xhochy@users.noreply.github.com>
+Date: Tue, 7 Apr 2020 07:23:14 +0200
+Subject: [PATCH 1/2] pybind11 is a build-time-only dependency
+
+Once the package is built, `pybind11` is no longer needed.
+---
+ tools/pythonpkg/setup.py | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/tools/pythonpkg/setup.py b/tools/pythonpkg/setup.py
+index 38e8e2bc7..250a80bc9 100755
+--- a/tools/pythonpkg/setup.py
++++ b/tools/pythonpkg/setup.py
+@@ -65,10 +65,12 @@ def __str__(self):
+     keywords = 'DuckDB Database SQL OLAP',
+     url="https://www.duckdb.org",
+     long_description = '',
++    setup_requires=[
++          'pybind11>=2.4'
++    ],
+     install_requires=[ # these versions are still available for Python 2, newer ones aren't
+          'numpy>=1.14', 
+          'pandas>=0.23',
+-         'pybind11>=2.4'
+     ],
+     packages=['duckdb_query_graph'],
+     include_package_data=True,
+
+From b47eca83bacb906ea2bf5c4590f1728cd27eef28 Mon Sep 17 00:00:00 2001
+From: "Uwe L. Korn" <xhochy@users.noreply.github.com>
+Date: Tue, 7 Apr 2020 07:27:06 +0200
+Subject: [PATCH 2/2] Update setup.py
+
+---
+ tools/pythonpkg/setup.py | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/tools/pythonpkg/setup.py b/tools/pythonpkg/setup.py
+index 250a80bc9..2c5822a8f 100755
+--- a/tools/pythonpkg/setup.py
++++ b/tools/pythonpkg/setup.py
+@@ -65,9 +65,6 @@ def __str__(self):
+     keywords = 'DuckDB Database SQL OLAP',
+     url="https://www.duckdb.org",
+     long_description = '',
+-    setup_requires=[
+-          'pybind11>=2.4'
+-    ],
+     install_requires=[ # these versions are still available for Python 2, newer ones aren't
+          'numpy>=1.14', 
+          'pandas>=0.23',
