@@ -8,8 +8,7 @@ package:
 source:
   url: https://github.com/cwida/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 07b6db4512cf41647043160dc64dfd919948ca7f96c31c1085ce2c79e2059a1c
-  patches:
-    - 487.patch
+
 
 build:
   number: 0
