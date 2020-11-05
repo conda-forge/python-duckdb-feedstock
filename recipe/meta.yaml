@@ -30,7 +30,7 @@ requirements:
     - setuptools_scm
     - numpy
     - pandas
-    - arrow-cpp
+    - arrow-cpp >=1.0.1
     - pyarrow
   run:
     - python
