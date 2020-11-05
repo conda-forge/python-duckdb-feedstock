@@ -44,8 +44,12 @@ test:
     - duckdb
   requires:
     - pip
+    - pytest
+  source_files:
+    - tools/pythonpkg/tests
   commands:
     - pip check
+    - pytest tools/pythonpkg/tests
 
 about:
   home: https://www.duckdb.org/
