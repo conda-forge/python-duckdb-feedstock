@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "0.1.6" %}
+{% set version = "0.2.2" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/cwida/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: fdb7b38082dcf55aafd51bea81036bc9efed95a99ac9fa5d76f1f876be909cd1
+  sha256: e2d0d9245f3deb1a337a22fa11c8a5c80eab0ebafd0e8645762ecd89ecc56a30
   patches:
     - 487.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   script: cd tools/pythonpkg && SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} $PREFIX/bin/python setup.py install
 
