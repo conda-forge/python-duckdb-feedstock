@@ -28,7 +28,7 @@ requirements:
     - python
     - pip
     - setuptools_scm
-    - numpy 1.16
+    - numpy
     - pandas
   run:
     - python
