@@ -1,11 +1,11 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 arrow_cpp:
-- 1.0.1
+- 2.0.0
 c_compiler:
 - clang
 c_compiler_version:
-- '10'
+- '11'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -13,7 +13,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '10'
+- '11'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
