@@ -1,5 +1,7 @@
 BUILD:
 - aarch64-conda_cos7-linux-gnu
+arrow_cpp:
+- 1.0.1
 c_compiler:
 - gcc
 c_compiler_version:
