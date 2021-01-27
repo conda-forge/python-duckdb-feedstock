@@ -12,7 +12,7 @@ source:
     # - 487.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
   script: cd tools/pythonpkg && SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} $PREFIX/bin/python setup.py install
   ignore_run_exports: 
