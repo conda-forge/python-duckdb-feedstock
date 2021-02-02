@@ -20,6 +20,10 @@ build:
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - arrow-cpp                              # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - cmake
     - ninja
     - make
@@ -32,7 +36,7 @@ requirements:
     - setuptools_scm
     - numpy
     - pandas
-    - arrow-cpp >=1.0.1
+    - arrow-cpp
     - pyarrow
   run:
     - python
