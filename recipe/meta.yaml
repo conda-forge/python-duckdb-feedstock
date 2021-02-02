@@ -52,7 +52,8 @@ test:
     - tools/pythonpkg/tests
   commands:
     - pip check
-    - pytest tools/pythonpkg/tests
+    # ppc64le is emulated and fails to run the test suite here
+    - pytest tools/pythonpkg/tests # [not ppc64le]
 
 about:
   home: https://www.duckdb.org/
