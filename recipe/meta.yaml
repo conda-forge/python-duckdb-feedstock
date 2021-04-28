@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "0.2.4" %}
+{% set version = "0.2.5" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/cwida/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 7dc23cf955417afda39bcbec205408b92a48177a32c592a60fea815514166a70
+  sha256: 0e88fdf4d4dad62d02d466bb321b29fbcd199e2b8f00df9b5a701f26bec44af3
   patches:
     # - 487.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   script: cd tools/pythonpkg && SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} $PREFIX/bin/python setup.py install
   ignore_run_exports:
