@@ -3,5 +3,5 @@ __migrator:
   kind: version
   migration_number: 1
 arrow_cpp:
-- 4.0.0
-migrator_ts: 1619601256.5763247
+- 4.0.1
+migrator_ts: 1622221393.3170645
