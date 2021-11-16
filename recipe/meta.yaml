@@ -52,6 +52,7 @@ test:
   requires:
     - pip
     - pytest
+    - mypy
   source_files:
     - tools/pythonpkg/tests
   commands:
