@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/duckdb/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 65fa44665a4cd187d08a51e2069da953061a3c7c6bbf06f996704ee3f1953d3c
-  patches:
-    # - 487.patch
 
 build:
   number: 2
