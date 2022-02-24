@@ -200,7 +200,7 @@ jobs:
         CONFIG: linux_ppc64le_arrow_cpp7.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-    maxParallel: 38
+    maxParallel: 30
   timeoutInMinutes: 360
 
   steps:
