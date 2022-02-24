@@ -72,7 +72,7 @@ about:
     fast while embedded in another process. It is designed to be easy to
     install and easy to use.
   doc_url: https://www.duckdb.org/docs/current/index.html
-  dev_url: https://github.com/cwida/duckdb
+  dev_url: https://github.com/duckdb/duckdb
 
 extra:
   recipe-maintainers:

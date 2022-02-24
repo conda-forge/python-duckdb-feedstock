@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-duckdb-f
 
 Summary: An Embeddable Analytical Database
 
-Development: https://github.com/cwida/duckdb
+Development: https://github.com/duckdb/duckdb
 
 Documentation: https://www.duckdb.org/docs/current/index.html
 
