@@ -15,7 +15,7 @@ build:
   number: 2
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-  script: cd tools/pythonpkg && $PREFIX/bin/python setup.py install
+  script: "{{ PYTHON }} -m pip install tools/pythonpkg -vv"
   ignore_run_exports:
     - arrow-cpp
 
