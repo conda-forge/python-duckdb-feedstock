@@ -1,5 +1,5 @@
 arrow_cpp:
-- 6.0.1
+- 5.0.0
 c_compiler:
 - gcc
 c_compiler_version:
@@ -23,7 +23,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.9.* *_cpython
+- 3.7.* *_cpython
 target_platform:
 - linux-64
 zip_keys:
