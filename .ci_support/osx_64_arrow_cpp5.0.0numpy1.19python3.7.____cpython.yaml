@@ -16,6 +16,8 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '13'
+libprotobuf:
+- '3.19'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:

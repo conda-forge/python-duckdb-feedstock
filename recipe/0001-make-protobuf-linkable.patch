@@ -1,0 +1,159 @@
+From c75e65c37339ea6ee2d0d6d94a73f1134b03f104 Mon Sep 17 00:00:00 2001
+From: Marius van Niekerk <marius.v.niekerk@gmail.com>
+Date: Fri, 17 Jun 2022 15:49:23 -0400
+Subject: [PATCH] make protobuf linkable
+
+---
+ extension/substrait/substrait_config.py | 106 +++++++++++++-----------
+ tools/pythonpkg/setup.py                |   6 ++
+ 2 files changed, 63 insertions(+), 49 deletions(-)
+
+diff --git a/extension/substrait/substrait_config.py b/extension/substrait/substrait_config.py
+index 03b2daf66..1b437347b 100644
+--- a/extension/substrait/substrait_config.py
++++ b/extension/substrait/substrait_config.py
+@@ -1,5 +1,7 @@
+ import os
+ 
++USE_SYSTEM_PROTOBUF = os.environ.get("USE_SYSTEM_PROTOBUF", "false").lower() == "true"
++
+ # list all include directories
+ include_directories = [
+     os.path.sep.join(x.split("/"))
+@@ -7,7 +9,7 @@ include_directories = [
+         "extension/substrait/include/",
+         "third_party/",
+         "third_party/substrait/",
+-        "third_party/google/"
++        *([] if USE_SYSTEM_PROTOBUF else ["third_party/google/"]),
+     ]
+ ]
+ # source files
+@@ -27,53 +29,59 @@ source_files = [
+         "third_party/substrait/substrait/type_expressions.pb.cc",
+         "third_party/substrait/substrait/extensions/extensions.pb.cc",
+         # Protobuf common
+-        "third_party/google/protobuf/any.cc",
+-        "third_party/google/protobuf/any.pb.cc",
+-        "third_party/google/protobuf/any_lite.cc",
+-        "third_party/google/protobuf/arena.cc",
+-        "third_party/google/protobuf/arenastring.cc",
+-        "third_party/google/protobuf/descriptor.cc",
+-        "third_party/google/protobuf/descriptor.pb.cc",
+-        "third_party/google/protobuf/descriptor_database.cc",
+-        "third_party/google/protobuf/dynamic_message.cc",
+-        "third_party/google/protobuf/extension_set.cc",
+-        "third_party/google/protobuf/extension_set_heavy.cc",
+-        "third_party/google/protobuf/generated_enum_util.cc",
+-        "third_party/google/protobuf/generated_message_bases.cc",
+-        "third_party/google/protobuf/generated_message_reflection.cc",
+-        "third_party/google/protobuf/generated_message_table_driven.cc",
+-        "third_party/google/protobuf/generated_message_table_driven_lite.cc",
+-        "third_party/google/protobuf/generated_message_util.cc",
+-        "third_party/google/protobuf/implicit_weak_message.cc",
+-        "third_party/google/protobuf/inlined_string_field.cc",
+-        "third_party/google/protobuf/map.cc",
+-        "third_party/google/protobuf/map_field.cc",
+-        "third_party/google/protobuf/message.cc",
+-        "third_party/google/protobuf/message_lite.cc",
+-        "third_party/google/protobuf/parse_context.cc",
+-        "third_party/google/protobuf/reflection_ops.cc",
+-        "third_party/google/protobuf/repeated_field.cc",
+-        "third_party/google/protobuf/repeated_ptr_field.cc",
+-        "third_party/google/protobuf/text_format.cc",
+-        "third_party/google/protobuf/unknown_field_set.cc",
+-        "third_party/google/protobuf/wire_format.cc",
+-        "third_party/google/protobuf/wire_format_lite.cc",
+-        # Protobuf io
+-        "third_party/google/protobuf/io/coded_stream.cc",
+-        "third_party/google/protobuf/io/io_win32.cc",
+-        "third_party/google/protobuf/io/strtod.cc",
+-        "third_party/google/protobuf/io/tokenizer.cc",
+-        "third_party/google/protobuf/io/zero_copy_stream.cc",
+-        "third_party/google/protobuf/io/zero_copy_stream_impl.cc",
+-        "third_party/google/protobuf/io/zero_copy_stream_impl_lite.cc",
+-        # Protobuf stubs
+-        "third_party/google/protobuf/stubs/common.cc",
+-        "third_party/google/protobuf/stubs/int128.cc",
+-        "third_party/google/protobuf/stubs/status.cc",
+-        "third_party/google/protobuf/stubs/stringpiece.cc",
+-        "third_party/google/protobuf/stubs/stringprintf.cc",
+-        "third_party/google/protobuf/stubs/structurally_valid.cc",
+-        "third_party/google/protobuf/stubs/strutil.cc",
+-        "third_party/google/protobuf/stubs/substitute.cc",
++        *(
++            []
++            if USE_SYSTEM_PROTOBUF
++            else [
++                "third_party/google/protobuf/any.cc",
++                "third_party/google/protobuf/any.pb.cc",
++                "third_party/google/protobuf/any_lite.cc",
++                "third_party/google/protobuf/arena.cc",
++                "third_party/google/protobuf/arenastring.cc",
++                "third_party/google/protobuf/descriptor.cc",
++                "third_party/google/protobuf/descriptor.pb.cc",
++                "third_party/google/protobuf/descriptor_database.cc",
++                "third_party/google/protobuf/dynamic_message.cc",
++                "third_party/google/protobuf/extension_set.cc",
++                "third_party/google/protobuf/extension_set_heavy.cc",
++                "third_party/google/protobuf/generated_enum_util.cc",
++                "third_party/google/protobuf/generated_message_bases.cc",
++                "third_party/google/protobuf/generated_message_reflection.cc",
++                "third_party/google/protobuf/generated_message_table_driven.cc",
++                "third_party/google/protobuf/generated_message_table_driven_lite.cc",
++                "third_party/google/protobuf/generated_message_util.cc",
++                "third_party/google/protobuf/implicit_weak_message.cc",
++                "third_party/google/protobuf/inlined_string_field.cc",
++                "third_party/google/protobuf/map.cc",
++                "third_party/google/protobuf/map_field.cc",
++                "third_party/google/protobuf/message.cc",
++                "third_party/google/protobuf/message_lite.cc",
++                "third_party/google/protobuf/parse_context.cc",
++                "third_party/google/protobuf/reflection_ops.cc",
++                "third_party/google/protobuf/repeated_field.cc",
++                "third_party/google/protobuf/repeated_ptr_field.cc",
++                "third_party/google/protobuf/text_format.cc",
++                "third_party/google/protobuf/unknown_field_set.cc",
++                "third_party/google/protobuf/wire_format.cc",
++                "third_party/google/protobuf/wire_format_lite.cc",
++                # Protobuf io
++                "third_party/google/protobuf/io/coded_stream.cc",
++                "third_party/google/protobuf/io/io_win32.cc",
++                "third_party/google/protobuf/io/strtod.cc",
++                "third_party/google/protobuf/io/tokenizer.cc",
++                "third_party/google/protobuf/io/zero_copy_stream.cc",
++                "third_party/google/protobuf/io/zero_copy_stream_impl.cc",
++                "third_party/google/protobuf/io/zero_copy_stream_impl_lite.cc",
++                # Protobuf stubs
++                "third_party/google/protobuf/stubs/common.cc",
++                "third_party/google/protobuf/stubs/int128.cc",
++                "third_party/google/protobuf/stubs/status.cc",
++                "third_party/google/protobuf/stubs/stringpiece.cc",
++                "third_party/google/protobuf/stubs/stringprintf.cc",
++                "third_party/google/protobuf/stubs/structurally_valid.cc",
++                "third_party/google/protobuf/stubs/strutil.cc",
++                "third_party/google/protobuf/stubs/substitute.cc",
++            ]
++        ),
+     ]
+ ]
+diff --git a/tools/pythonpkg/setup.py b/tools/pythonpkg/setup.py
+index 872ac2acd..f69cabd2c 100755
+--- a/tools/pythonpkg/setup.py
++++ b/tools/pythonpkg/setup.py
+@@ -91,6 +91,12 @@ if platform.system() == 'Windows':
+ if 'BUILD_HTTPFS' in os.environ:
+     libraries += ['crypto', 'ssl']
+     extensions += ['httpfs']
++if 'USE_SYSTEM_PROTOBUF' in os.environ:
++    if platform.system() == 'Windows':
++        libraries += ['libprotoc', 'libprotobuf', 'libprotobuf-lite']
++    else:
++        libraries += ['protoc', 'protobuf', 'protobuf-lite']
++    libraries += ['upb', 'address_sorting',]
+ 
+ for ext in extensions:
+     toolchain_args.extend(['-DBUILD_{}_EXTENSION'.format(ext.upper())])
+-- 
+2.35.3
+
