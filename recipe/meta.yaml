@@ -16,6 +16,8 @@ build:
   number: 0
   skip: true  # [win]
   script: 
+  # regenerate substrait to match the linked protobuf version
+  - python scripts/update_substrait.py
   - rm -rf third_party/google/protobuf
   - export USE_SYSTEM_PROTOBUF=true
   - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
