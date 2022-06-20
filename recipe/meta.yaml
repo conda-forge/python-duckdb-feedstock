@@ -16,6 +16,14 @@ build:
   number: 0
   skip: true  # [win]
   script: 
+  # install buf
+  - set -e
+  - set -x
+  - env | sort
+  - export GOBIN="${BUILD_PREFIX}/bin"
+  - export GO111MODULE=on
+  - go install github.com/bufbuild/buf/cmd/buf@v1.5.0
+  - which buf
   # regenerate substrait to match the linked protobuf version
   - python scripts/update_substrait.py
   - rm -rf third_party/google/protobuf
@@ -36,6 +44,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - arrow-cpp                              # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
+    - go-nocgo
     - cmake
     - ninja
     - make
