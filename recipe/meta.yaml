@@ -14,7 +14,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
+  skip: true  # [win or aarch64]
   script:
   # install buf
     - set -e
