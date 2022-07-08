@@ -75,6 +75,7 @@ test:
     - pip
     - pytest
     - mypy
+    - google-cloud-storage
   source_files:
     - tools/pythonpkg/tests
   commands:
