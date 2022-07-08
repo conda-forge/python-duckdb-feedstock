@@ -92,7 +92,7 @@ jobs:
       osx_arm64_arrow_cpp8.0.0numpy1.21python3.10.____cpython:
         CONFIG: osx_arm64_arrow_cpp8.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-    maxParallel: 18
+    maxParallel: 23
   timeoutInMinutes: 360
 
   steps:

@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "0.3.4" %}
+{% set version = "0.4.0" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,29 +7,29 @@ package:
 
 source:
   url: https://github.com/cwida/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 74863d60977fcb7768c300a0f10a90fbbd3087e310edd42b8e1b1dc5513835dd
+  sha256: 52dc309da50ea06d02d4d8364a8e1f9fb8da2f1c30fdd65eff119b81ee434bd4
   patches:
     # - 487.patch
     - 0001-make-protobuf-linkable.patch
 
 build:
-  number: 1
-  skip: true  # [win]
-  script: 
+  number: 0
+  skip: true  # [win or aarch64]
+  script:
   # install buf
-  - set -e
-  - set -x
-  - env | sort
-  - export GOBIN="${BUILD_PREFIX}/bin"
-  - export GO111MODULE=on
-  - go install github.com/bufbuild/buf/cmd/buf@v1.5.0
-  - which buf
+    - set -e
+    - set -x
+    - env | sort
+    - export GOBIN="${BUILD_PREFIX}/bin"
+    - export GO111MODULE=on
+    - go install github.com/bufbuild/buf/cmd/buf@v1.5.0
+    - which buf
   # regenerate substrait to match the linked protobuf version
-  - python scripts/update_substrait.py
-  - rm -rf third_party/google/protobuf
-  - export USE_SYSTEM_PROTOBUF=true
-  - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-  - cd tools/pythonpkg && $PREFIX/bin/python setup.py install
+    - python scripts/update_substrait.py
+    - rm -rf third_party/google/protobuf
+    - export USE_SYSTEM_PROTOBUF=true
+    - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
+    - cd tools/pythonpkg && $PREFIX/bin/python setup.py install
   ignore_run_exports:
     - arrow-cpp
 
@@ -75,6 +75,7 @@ test:
     - pip
     - pytest
     - mypy
+    - google-cloud-storage
   source_files:
     - tools/pythonpkg/tests
   commands:
