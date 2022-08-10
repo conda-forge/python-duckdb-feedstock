@@ -1,5 +1,5 @@
 arrow_cpp:
-- 8.0.0
+- 8.0.1
 c_compiler:
 - gcc
 c_compiler_version:
