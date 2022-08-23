@@ -22,7 +22,8 @@ build:
   # nuke local `.git` so we can override the SHA bundled as the version
     - rm -rf .git
   # this needs to match the upstream release commit SHA for extension lookup to work
-    - export SETUPTOOLS_SCM_PRETEND_VERSION="da9ee490d"
+    - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
+    - export SETUPTOOLS_SCM_PRETEND_HASH="da9ee490d"
     - cd tools/pythonpkg && $PREFIX/bin/python setup.py install
   ignore_run_exports:
     - arrow-cpp
