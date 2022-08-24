@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/cwida/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/duckdb/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 52dc309da50ea06d02d4d8364a8e1f9fb8da2f1c30fdd65eff119b81ee434bd4
   patches:
     # - 487.patch
