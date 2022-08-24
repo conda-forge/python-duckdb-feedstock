@@ -13,7 +13,7 @@ source:
     - 0001-make-protobuf-linkable.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or aarch64]
   script:
   # install buf
@@ -28,6 +28,10 @@ build:
     - python scripts/update_substrait.py
     - rm -rf third_party/google/protobuf
     - export USE_SYSTEM_PROTOBUF=true
+  # nuke local .git to allow overriding of setuptools values
+    - rm -rf .git
+  # set hash to allow extension resolution
+    - export SETUPTOOLS_SCM_PRETEND_HASH="da9ee490d"
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
     - cd tools/pythonpkg && $PREFIX/bin/python setup.py install
   ignore_run_exports:
