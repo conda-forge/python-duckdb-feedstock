@@ -6,29 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/cwida/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/duckdb/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 52dc309da50ea06d02d4d8364a8e1f9fb8da2f1c30fdd65eff119b81ee434bd4
   patches:
-    # - 487.patch
-    - 0001-make-protobuf-linkable.patch
+    - 0001-fix-parsing-of-stdout-for-mypy-stubs-test.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or aarch64]
   script:
   # install buf
     - set -e
     - set -x
-    - env | sort
-    - export GOBIN="${BUILD_PREFIX}/bin"
-    - export GO111MODULE=on
-    - go install github.com/bufbuild/buf/cmd/buf@v1.5.0
-    - which buf
-  # regenerate substrait to match the linked protobuf version
-    - python scripts/update_substrait.py
-    - rm -rf third_party/google/protobuf
-    - export USE_SYSTEM_PROTOBUF=true
+  # nuke local `.git` so we can override the SHA bundled as the version
+    - rm -rf .git
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
+  # this needs to match the upstream release commit SHA for extension lookup to work
+    - export SETUPTOOLS_SCM_PRETEND_HASH="da9ee490d"
     - cd tools/pythonpkg && $PREFIX/bin/python setup.py install
   ignore_run_exports:
     - arrow-cpp
@@ -39,12 +33,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
-    - python                                 # [build_platform != target_platform]
-    - libprotobuf                            # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - arrow-cpp                              # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
-    - go-nocgo
     - cmake
     - ninja
     - make
@@ -59,7 +48,6 @@ requirements:
     - pandas
     - arrow-cpp
     - pyarrow
-    - libprotobuf
   run:
     - python
     - {{ pin_compatible('numpy') }}
