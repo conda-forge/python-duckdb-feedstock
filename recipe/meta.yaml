@@ -10,16 +10,15 @@ source:
   sha256: 52dc309da50ea06d02d4d8364a8e1f9fb8da2f1c30fdd65eff119b81ee434bd4
   patches:
     - 0001-fix-parsing-of-stdout-for-mypy-stubs-test.patch
+    - 0002-short-circuit-hash-and-version-discovery.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win or aarch64]
   script:
   # install buf
     - set -e
     - set -x
-  # nuke local `.git` so we can override the SHA bundled as the version
-    - rm -rf .git
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   # this needs to match the upstream release commit SHA for extension lookup to work
     - export SETUPTOOLS_SCM_PRETEND_HASH="da9ee490d"
