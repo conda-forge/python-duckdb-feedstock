@@ -67,8 +67,8 @@ test:
     - tools/pythonpkg/tests
   commands:
     - pip check
-    # ppc64le is emulated and fails to run the test suite here
-    - pytest -sv tools/pythonpkg/tests  # [not ppc64le]
+    # ppc64le/aarch64 is emulated and fails to run the test suite here
+    - pytest tools/pythonpkg/tests  # [not (ppc64le or aarch64)]
 
 about:
   home: https://www.duckdb.org/
