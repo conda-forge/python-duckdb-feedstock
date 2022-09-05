@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/duckdb/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 52dc309da50ea06d02d4d8364a8e1f9fb8da2f1c30fdd65eff119b81ee434bd4
+  sha256: 677655a7985fd8075a4b315c0b73bea51c419f1645e779560830ce9bfcc1b97c
   patches:
     - 0001-fix-parsing-of-stdout-for-mypy-stubs-test.patch
     - 0002-short-circuit-hash-and-version-discovery.patch
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win]
   script:
   # install buf
