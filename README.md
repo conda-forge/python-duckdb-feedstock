@@ -697,6 +697,7 @@ Feedstock Maintainers
 =====================
 
 * [@dhirschfeld](https://github.com/dhirschfeld/)
+* [@gforsyth](https://github.com/gforsyth/)
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
 * [@xhochy](https://github.com/xhochy/)
 
