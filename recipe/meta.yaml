@@ -11,7 +11,7 @@ source:
   patches:
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   script:
   # install buf
@@ -19,7 +19,7 @@ build:
     - set -x
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   # this needs to match the upstream release commit SHA for extension lookup to work
-    - export SETUPTOOLS_SCM_PRETEND_HASH="109f932"
+    - export SETUPTOOLS_SCM_PRETEND_HASH="109f932c4"
     - cd tools/pythonpkg && $PREFIX/bin/python setup.py install
   ignore_run_exports:
     - arrow-cpp
