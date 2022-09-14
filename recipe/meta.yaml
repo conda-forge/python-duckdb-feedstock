@@ -70,7 +70,7 @@ test:
     # ppc64le/aarch64 is emulated and fails to run the test suite here
     - pytest tools/pythonpkg/tests  # [not (ppc64le or aarch64)]
     # DuckDB not currently building extensions for linux-aarch64
-    - python test_extension_install.py  # [not linux_aarch64]
+    - python test_extension_install.py  # [not (linux and aarch64)]
 
 about:
   home: https://www.duckdb.org/
