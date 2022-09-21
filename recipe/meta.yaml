@@ -18,8 +18,6 @@ build:
     - set -e
     - set -x
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-  # this needs to match the upstream release commit SHA for extension lookup to work
-    - export SETUPTOOLS_SCM_PRETEND_HASH="7c111322d"
     - cd tools/pythonpkg && $PREFIX/bin/python setup.py install
   ignore_run_exports:
     - arrow-cpp
@@ -70,7 +68,7 @@ test:
     # ppc64le/aarch64 is emulated and fails to run the test suite here
     - pytest tools/pythonpkg/tests  # [not (ppc64le or aarch64)]
     # DuckDB not currently building extensions for linux-aarch64
-    - python test_extension_install.py  # [not (linux and aarch64)]
+    - python test_extension_install.py  # [not (ppc64le or aarch64)]
 
 about:
   home: https://www.duckdb.org/
