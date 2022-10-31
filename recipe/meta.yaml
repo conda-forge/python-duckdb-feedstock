@@ -12,13 +12,10 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
+  script_env:
+    - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   script:
-  # install buf
-    - set -e
-    - set -x
-    - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-    - cd tools/pythonpkg && $PREFIX/bin/python setup.py install
+    - {{ PYTHON }} -m pip install tools/pythonpkg -vv
   ignore_run_exports:
     - arrow-cpp
 
@@ -67,7 +64,8 @@ test:
   commands:
     - pip check
     # ppc64le/aarch64 is emulated and fails to run the test suite here
-    - pytest tools/pythonpkg/tests  # [not (ppc64le or aarch64)]
+    # Skip slow tests to avoid memory issues in CI, skip stub tests that is fragile under new version of mypy
+    - pytest tools/pythonpkg/tests --ignore=tools/pythonpkg/tests/slow/ --ignore=tools/pythonpkg/tests/stubs/  # [not (ppc64le or aarch64)]
     # DuckDB not currently building extensions for linux-aarch64
     - python test_extension_install.py  # [not (linux and aarch64)]
 
