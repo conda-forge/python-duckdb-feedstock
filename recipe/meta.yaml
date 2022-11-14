@@ -18,8 +18,6 @@ build:
     - set -e
     - set -x
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-  # this needs to match the upstream release commit SHA for extension lookup to work
-    - export SETUPTOOLS_SCM_PRETEND_HASH="109f932c4"
     - cd tools/pythonpkg && $PREFIX/bin/python setup.py install
   ignore_run_exports:
     - arrow-cpp
@@ -31,6 +29,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
     - arrow-cpp                              # [build_platform != target_platform]
+    - setuptools_scm <7
     - cmake
     - ninja
     - make
@@ -40,7 +39,7 @@ requirements:
     - pybind11 >=2.4
     - python
     - pip
-    - setuptools_scm
+    - setuptools_scm <7
     - numpy
     - pandas
     - arrow-cpp
@@ -83,7 +82,7 @@ about:
     fast while embedded in another process. It is designed to be easy to
     install and easy to use.
   doc_url: https://www.duckdb.org/docs/current/index.html
-  dev_url: https://github.com/cwida/duckdb
+  dev_url: https://github.com/duckdb/duckdb
 
 extra:
   recipe-maintainers:
