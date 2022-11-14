@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/duckdb/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 3dab7ba0d0f8d024d3c73fd3d4fb8834203c31d7b0ddb1e8539ee266e11b0e9b
+  sha256: 700b09114f8b99892a9d19ba21ca962ae65d1ea8085622418a2fa50ff915b244
   patches:
 
 build:
