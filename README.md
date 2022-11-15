@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-duckdb-f
 
 Summary: An Embeddable Analytical Database
 
-Development: https://github.com/cwida/duckdb
+Development: https://github.com/duckdb/duckdb
 
 Documentation: https://www.duckdb.org/docs/current/index.html
 
@@ -57,6 +57,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_arrow_cpp6.0.2numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_arrow_cpp6.0.2numpy1.23python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_arrow_cpp7.0.1numpy1.20python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
@@ -75,6 +82,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_arrow_cpp7.0.1numpy1.21python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_arrow_cpp7.0.1numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_arrow_cpp7.0.1numpy1.23python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -99,6 +113,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_arrow_cpp8.0.1numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_arrow_cpp8.0.1numpy1.23python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_arrow_cpp9.0.0numpy1.20python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
@@ -117,6 +138,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_arrow_cpp9.0.0numpy1.21python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_arrow_cpp9.0.0numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_arrow_cpp9.0.0numpy1.23python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -141,6 +169,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_aarch64_arrow_cpp6.0.2numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arrow_cpp6.0.2numpy1.23python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_aarch64_arrow_cpp7.0.1numpy1.20python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
@@ -159,6 +194,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arrow_cpp7.0.1numpy1.21python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_arrow_cpp7.0.1numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arrow_cpp7.0.1numpy1.23python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -183,6 +225,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_aarch64_arrow_cpp8.0.1numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arrow_cpp8.0.1numpy1.23python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_aarch64_arrow_cpp9.0.0numpy1.20python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
@@ -201,6 +250,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arrow_cpp9.0.0numpy1.21python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_arrow_cpp9.0.0numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arrow_cpp9.0.0numpy1.23python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -225,6 +281,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_ppc64le_arrow_cpp6.0.2numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_arrow_cpp6.0.2numpy1.23python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_ppc64le_arrow_cpp7.0.1numpy1.20python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
@@ -243,6 +306,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_arrow_cpp7.0.1numpy1.21python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_arrow_cpp7.0.1numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_arrow_cpp7.0.1numpy1.23python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -267,6 +337,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_ppc64le_arrow_cpp8.0.1numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_arrow_cpp8.0.1numpy1.23python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_ppc64le_arrow_cpp9.0.0numpy1.20python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
@@ -285,6 +362,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_arrow_cpp9.0.0numpy1.21python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_arrow_cpp9.0.0numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_arrow_cpp9.0.0numpy1.23python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -309,6 +393,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_64_arrow_cpp6.0.2numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_arrow_cpp6.0.2numpy1.23python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_arrow_cpp7.0.1numpy1.20python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
@@ -327,6 +418,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_arrow_cpp7.0.1numpy1.21python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow_cpp7.0.1numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_arrow_cpp7.0.1numpy1.23python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -351,6 +449,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_64_arrow_cpp8.0.1numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_arrow_cpp8.0.1numpy1.23python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_arrow_cpp9.0.0numpy1.20python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
@@ -369,6 +474,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_arrow_cpp9.0.0numpy1.21python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow_cpp9.0.0numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_arrow_cpp9.0.0numpy1.23python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -393,6 +505,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_arm64_arrow_cpp6.0.2numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_arrow_cpp6.0.2numpy1.23python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_arm64_arrow_cpp7.0.1numpy1.20python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
@@ -411,6 +530,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_arrow_cpp7.0.1numpy1.21python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_arrow_cpp7.0.1numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_arrow_cpp7.0.1numpy1.23python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -435,6 +561,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_arm64_arrow_cpp8.0.1numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_arrow_cpp8.0.1numpy1.23python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_arm64_arrow_cpp9.0.0numpy1.20python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
@@ -453,6 +586,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_arrow_cpp9.0.0numpy1.21python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_arrow_cpp9.0.0numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7019&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-duckdb-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_arrow_cpp9.0.0numpy1.23python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr>

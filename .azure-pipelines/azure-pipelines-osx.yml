@@ -17,6 +17,9 @@ jobs:
       osx_64_arrow_cpp6.0.2numpy1.21python3.10.____cpython:
         CONFIG: osx_64_arrow_cpp6.0.2numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
+      osx_64_arrow_cpp6.0.2numpy1.23python3.11.____cpython:
+        CONFIG: osx_64_arrow_cpp6.0.2numpy1.23python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
       osx_64_arrow_cpp7.0.1numpy1.20python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp7.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -25,6 +28,9 @@ jobs:
         UPLOAD_PACKAGES: 'True'
       osx_64_arrow_cpp7.0.1numpy1.21python3.10.____cpython:
         CONFIG: osx_64_arrow_cpp7.0.1numpy1.21python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+      osx_64_arrow_cpp7.0.1numpy1.23python3.11.____cpython:
+        CONFIG: osx_64_arrow_cpp7.0.1numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
       osx_64_arrow_cpp8.0.1numpy1.20python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp8.0.1numpy1.20python3.8.____cpython
@@ -35,6 +41,9 @@ jobs:
       osx_64_arrow_cpp8.0.1numpy1.21python3.10.____cpython:
         CONFIG: osx_64_arrow_cpp8.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
+      osx_64_arrow_cpp8.0.1numpy1.23python3.11.____cpython:
+        CONFIG: osx_64_arrow_cpp8.0.1numpy1.23python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
       osx_64_arrow_cpp9.0.0numpy1.20python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp9.0.0numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -43,6 +52,9 @@ jobs:
         UPLOAD_PACKAGES: 'True'
       osx_64_arrow_cpp9.0.0numpy1.21python3.10.____cpython:
         CONFIG: osx_64_arrow_cpp9.0.0numpy1.21python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+      osx_64_arrow_cpp9.0.0numpy1.23python3.11.____cpython:
+        CONFIG: osx_64_arrow_cpp9.0.0numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
       osx_arm64_arrow_cpp6.0.2numpy1.20python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp6.0.2numpy1.20python3.8.____cpython
@@ -53,6 +65,9 @@ jobs:
       osx_arm64_arrow_cpp6.0.2numpy1.21python3.10.____cpython:
         CONFIG: osx_arm64_arrow_cpp6.0.2numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
+      osx_arm64_arrow_cpp6.0.2numpy1.23python3.11.____cpython:
+        CONFIG: osx_arm64_arrow_cpp6.0.2numpy1.23python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
       osx_arm64_arrow_cpp7.0.1numpy1.20python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp7.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -61,6 +76,9 @@ jobs:
         UPLOAD_PACKAGES: 'True'
       osx_arm64_arrow_cpp7.0.1numpy1.21python3.10.____cpython:
         CONFIG: osx_arm64_arrow_cpp7.0.1numpy1.21python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_arrow_cpp7.0.1numpy1.23python3.11.____cpython:
+        CONFIG: osx_arm64_arrow_cpp7.0.1numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
       osx_arm64_arrow_cpp8.0.1numpy1.20python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.20python3.8.____cpython
@@ -71,6 +89,9 @@ jobs:
       osx_arm64_arrow_cpp8.0.1numpy1.21python3.10.____cpython:
         CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
+      osx_arm64_arrow_cpp8.0.1numpy1.23python3.11.____cpython:
+        CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.23python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
       osx_arm64_arrow_cpp9.0.0numpy1.20python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -79,6 +100,9 @@ jobs:
         UPLOAD_PACKAGES: 'True'
       osx_arm64_arrow_cpp9.0.0numpy1.21python3.10.____cpython:
         CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.21python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_arrow_cpp9.0.0numpy1.23python3.11.____cpython:
+        CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
     maxParallel: 20
   timeoutInMinutes: 360
