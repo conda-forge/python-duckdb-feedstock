@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/duckdb/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 40254006a84c7e1c86611a883fc7cf801cc9837712cd0ec49e17e19e06b3d3da
+  sha256: 67f840f861e5ffbe137d65a8543642d016f900b89dd035492d562ad11acf0e1e
   patches:
 
 build:
-  number: 1
+  number: 0
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   script:
