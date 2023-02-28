@@ -1,11 +1,11 @@
-About python-duckdb
-===================
+About python-duckdb-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-duckdb-feedstock/blob/main/LICENSE.txt)
 
 Home: https://www.duckdb.org/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-duckdb-feedstock/blob/main/LICENSE.txt)
 
 Summary: An Embeddable Analytical Database
 
