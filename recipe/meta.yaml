@@ -9,6 +9,7 @@ source:
   url: https://github.com/duckdb/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: a0674f7e320dc7ebcf51990d7fc1c0e7f7b2c335c08f5953702b5285e6c30694
   patches:
+    - 0001-test_7652-to-skip-on-pyarrow-11.patch
 
 build:
   number: 0

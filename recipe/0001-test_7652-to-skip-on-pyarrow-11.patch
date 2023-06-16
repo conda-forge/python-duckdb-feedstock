@@ -1,0 +1,27 @@
+From 45514e54532c68f6c5623050453e86a486a2d714 Mon Sep 17 00:00:00 2001
+From: Gil Forsyth <gil@forsyth.dev>
+Date: Fri, 16 Jun 2023 09:29:37 -0400
+Subject: [PATCH] test: patch test_7652 to skip on pyarrow<11
+
+---
+ tools/pythonpkg/tests/fast/arrow/test_7652.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/tools/pythonpkg/tests/fast/arrow/test_7652.py b/tools/pythonpkg/tests/fast/arrow/test_7652.py
+index dfcae55e99..b8a2a22869 100644
+--- a/tools/pythonpkg/tests/fast/arrow/test_7652.py
++++ b/tools/pythonpkg/tests/fast/arrow/test_7652.py
+@@ -3,8 +3,8 @@ import os
+ import pytest
+ import tempfile
+ 
+-pa = pytest.importorskip("pyarrow")
+-pq = pytest.importorskip("pyarrow.parquet")
++pa = pytest.importorskip("pyarrow", minversion="11")
++pq = pytest.importorskip("pyarrow.parquet", minversion="11")
+ 
+ class Test7652(object):
+     def test_7652(self):
+-- 
+2.34.1
+
