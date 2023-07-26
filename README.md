@@ -11,7 +11,7 @@ Summary: An Embeddable Analytical Database
 
 Development: https://github.com/duckdb/duckdb
 
-Documentation: https://www.duckdb.org/docs/current/index.html
+Documentation: https://duckdb.org/docs/index.html
 
 DuckDB is an embedded database designed to execute analytical SQL queries
 fast while embedded in another process. It is designed to be easy to
