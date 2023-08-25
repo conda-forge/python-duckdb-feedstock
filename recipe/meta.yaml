@@ -12,7 +12,7 @@ source:
     - 0001-test_7652-to-skip-on-pyarrow-11.patch
 
 build:
-  number: 0
+  number: 1
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   script:
