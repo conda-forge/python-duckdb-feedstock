@@ -38,13 +38,13 @@ requirements:
     - pip
     - setuptools_scm <7
     - numpy
-    - pandas
+    - pandas <2.1
     - arrow-cpp
     - pyarrow
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - pandas
+    - pandas <2.1
     - arrow-cpp
     - pyarrow
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
