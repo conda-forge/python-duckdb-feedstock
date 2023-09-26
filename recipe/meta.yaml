@@ -56,6 +56,7 @@ test:
     - pip
     - pytest
     - mypy
+    - fsspec
     - google-cloud-storage
   source_files:
     - tools/pythonpkg/tests
