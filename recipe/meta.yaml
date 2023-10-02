@@ -9,6 +9,7 @@ source:
   url: https://github.com/duckdb/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 3dbf3326a831bf0797591572440e81a3d6d668f8e33a25ce04efae19afc3a23d
   patches:
+    - 0001-chore-skip-arrow-union-tests-on-pyarrow-11.patch
 
 build:
   number: 0
