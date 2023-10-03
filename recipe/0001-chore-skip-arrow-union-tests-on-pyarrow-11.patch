@@ -1,0 +1,24 @@
+From cec34fb1f3ff3377af0a674ae84d02dd32ddf723 Mon Sep 17 00:00:00 2001
+From: Gil Forsyth <gil@forsyth.dev>
+Date: Mon, 2 Oct 2023 10:42:04 -0400
+Subject: [PATCH] chore: skip arrow union tests on pyarrow<11
+
+---
+ tools/pythonpkg/tests/fast/arrow/test_arrow_union.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/tools/pythonpkg/tests/fast/arrow/test_arrow_union.py b/tools/pythonpkg/tests/fast/arrow/test_arrow_union.py
+index 0e98506b3b..453a5b60a2 100644
+--- a/tools/pythonpkg/tests/fast/arrow/test_arrow_union.py
++++ b/tools/pythonpkg/tests/fast/arrow/test_arrow_union.py
+@@ -13,6 +13,7 @@ def test_nested():
+ 
+ 
+ def test_union_contains_nested_data():
++    _ = importorskip("pyarrow", minversion="11")
+     res = run("select ['hello']::UNION(first_name VARCHAR, middle_names VARCHAR[]) as res")
+     assert types.is_union(res.type)
+     assert res.value == scalar(['hello'], type=list_(string()))
+-- 
+2.34.1
+

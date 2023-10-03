@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "0.8.1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,12 +7,13 @@ package:
 
 source:
   url: https://github.com/duckdb/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: a0674f7e320dc7ebcf51990d7fc1c0e7f7b2c335c08f5953702b5285e6c30694
+  sha256: 3dbf3326a831bf0797591572440e81a3d6d668f8e33a25ce04efae19afc3a23d
   patches:
-    - 0001-test_7652-to-skip-on-pyarrow-11.patch
+    - 0001-chore-skip-arrow-union-tests-on-pyarrow-11.patch
+    - 0001-fix-arrowfs-skip-arrow-fs-test-on-windows.patch
 
 build:
-  number: 1
+  number: 0
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   script:
@@ -39,13 +40,13 @@ requirements:
     - pip
     - setuptools_scm <7
     - numpy
-    - pandas
+    - pandas <2.1
     - arrow-cpp
     - pyarrow
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - pandas
+    - pandas <2.1
     - arrow-cpp
     - pyarrow
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
@@ -57,6 +58,7 @@ test:
     - pip
     - pytest
     - mypy
+    - fsspec
     - google-cloud-storage
   source_files:
     - tools/pythonpkg/tests
