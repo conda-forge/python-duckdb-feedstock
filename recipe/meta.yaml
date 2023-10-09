@@ -87,6 +87,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - jonashaag
     - sugatoray
     - dhirschfeld
     - xhochy
