@@ -17,8 +17,6 @@ build:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   script:
     - {{ PYTHON }} -m pip install tools/pythonpkg -vv
-  ignore_run_exports:
-    - arrow-cpp
 
 requirements:
   build:
