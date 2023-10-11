@@ -838,6 +838,8 @@ Feedstock Maintainers
 
 * [@dhirschfeld](https://github.com/dhirschfeld/)
 * [@gforsyth](https://github.com/gforsyth/)
+* [@jonashaag](https://github.com/jonashaag/)
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
+* [@sugatoray](https://github.com/sugatoray/)
 * [@xhochy](https://github.com/xhochy/)
 
