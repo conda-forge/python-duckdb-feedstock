@@ -47,6 +47,7 @@ test:
     - pytest
     - mypy
     - fsspec
+    - pandas
     - google-cloud-storage
   source_files:
     - tools/pythonpkg/tests
