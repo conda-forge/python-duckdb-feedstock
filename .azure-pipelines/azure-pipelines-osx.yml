@@ -8,101 +8,101 @@ jobs:
     vmImage: macOS-11
   strategy:
     matrix:
-      osx_64_arrow_cpp10.0.1numpy1.22python3.10.____cpython:
-        CONFIG: osx_64_arrow_cpp10.0.1numpy1.22python3.10.____cpython
+      osx_64_arrow_cpp10.0.1python3.10.____cpython:
+        CONFIG: osx_64_arrow_cpp10.0.1python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_arrow_cpp10.0.1numpy1.22python3.8.____cpython:
-        CONFIG: osx_64_arrow_cpp10.0.1numpy1.22python3.8.____cpython
+      osx_64_arrow_cpp10.0.1python3.11.____cpython:
+        CONFIG: osx_64_arrow_cpp10.0.1python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_arrow_cpp10.0.1numpy1.22python3.9.____cpython:
-        CONFIG: osx_64_arrow_cpp10.0.1numpy1.22python3.9.____cpython
+      osx_64_arrow_cpp10.0.1python3.8.____cpython:
+        CONFIG: osx_64_arrow_cpp10.0.1python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_arrow_cpp10.0.1numpy1.23python3.11.____cpython:
-        CONFIG: osx_64_arrow_cpp10.0.1numpy1.23python3.11.____cpython
+      osx_64_arrow_cpp10.0.1python3.9.____cpython:
+        CONFIG: osx_64_arrow_cpp10.0.1python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_arrow_cpp11.0.0numpy1.22python3.10.____cpython:
-        CONFIG: osx_64_arrow_cpp11.0.0numpy1.22python3.10.____cpython
+      osx_64_arrow_cpp11.0.0python3.10.____cpython:
+        CONFIG: osx_64_arrow_cpp11.0.0python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_arrow_cpp11.0.0numpy1.22python3.8.____cpython:
-        CONFIG: osx_64_arrow_cpp11.0.0numpy1.22python3.8.____cpython
+      osx_64_arrow_cpp11.0.0python3.11.____cpython:
+        CONFIG: osx_64_arrow_cpp11.0.0python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_arrow_cpp11.0.0numpy1.22python3.9.____cpython:
-        CONFIG: osx_64_arrow_cpp11.0.0numpy1.22python3.9.____cpython
+      osx_64_arrow_cpp11.0.0python3.8.____cpython:
+        CONFIG: osx_64_arrow_cpp11.0.0python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_arrow_cpp11.0.0numpy1.23python3.11.____cpython:
-        CONFIG: osx_64_arrow_cpp11.0.0numpy1.23python3.11.____cpython
+      osx_64_arrow_cpp11.0.0python3.9.____cpython:
+        CONFIG: osx_64_arrow_cpp11.0.0python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_arrow_cpp12numpy1.22python3.10.____cpython:
-        CONFIG: osx_64_arrow_cpp12numpy1.22python3.10.____cpython
+      osx_64_arrow_cpp12python3.10.____cpython:
+        CONFIG: osx_64_arrow_cpp12python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_arrow_cpp12numpy1.22python3.8.____cpython:
-        CONFIG: osx_64_arrow_cpp12numpy1.22python3.8.____cpython
+      osx_64_arrow_cpp12python3.11.____cpython:
+        CONFIG: osx_64_arrow_cpp12python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_arrow_cpp12numpy1.22python3.9.____cpython:
-        CONFIG: osx_64_arrow_cpp12numpy1.22python3.9.____cpython
+      osx_64_arrow_cpp12python3.8.____cpython:
+        CONFIG: osx_64_arrow_cpp12python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_arrow_cpp12numpy1.23python3.11.____cpython:
-        CONFIG: osx_64_arrow_cpp12numpy1.23python3.11.____cpython
+      osx_64_arrow_cpp12python3.9.____cpython:
+        CONFIG: osx_64_arrow_cpp12python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_arrow_cpp13numpy1.22python3.10.____cpython:
-        CONFIG: osx_64_arrow_cpp13numpy1.22python3.10.____cpython
+      osx_64_arrow_cpp13python3.10.____cpython:
+        CONFIG: osx_64_arrow_cpp13python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_arrow_cpp13numpy1.22python3.8.____cpython:
-        CONFIG: osx_64_arrow_cpp13numpy1.22python3.8.____cpython
+      osx_64_arrow_cpp13python3.11.____cpython:
+        CONFIG: osx_64_arrow_cpp13python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_arrow_cpp13numpy1.22python3.9.____cpython:
-        CONFIG: osx_64_arrow_cpp13numpy1.22python3.9.____cpython
+      osx_64_arrow_cpp13python3.8.____cpython:
+        CONFIG: osx_64_arrow_cpp13python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_arrow_cpp13numpy1.23python3.11.____cpython:
-        CONFIG: osx_64_arrow_cpp13numpy1.23python3.11.____cpython
+      osx_64_arrow_cpp13python3.9.____cpython:
+        CONFIG: osx_64_arrow_cpp13python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp10.0.1numpy1.22python3.10.____cpython:
-        CONFIG: osx_arm64_arrow_cpp10.0.1numpy1.22python3.10.____cpython
+      osx_arm64_arrow_cpp10.0.1python3.10.____cpython:
+        CONFIG: osx_arm64_arrow_cpp10.0.1python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp10.0.1numpy1.22python3.8.____cpython:
-        CONFIG: osx_arm64_arrow_cpp10.0.1numpy1.22python3.8.____cpython
+      osx_arm64_arrow_cpp10.0.1python3.11.____cpython:
+        CONFIG: osx_arm64_arrow_cpp10.0.1python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp10.0.1numpy1.22python3.9.____cpython:
-        CONFIG: osx_arm64_arrow_cpp10.0.1numpy1.22python3.9.____cpython
+      osx_arm64_arrow_cpp10.0.1python3.8.____cpython:
+        CONFIG: osx_arm64_arrow_cpp10.0.1python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp10.0.1numpy1.23python3.11.____cpython:
-        CONFIG: osx_arm64_arrow_cpp10.0.1numpy1.23python3.11.____cpython
+      osx_arm64_arrow_cpp10.0.1python3.9.____cpython:
+        CONFIG: osx_arm64_arrow_cpp10.0.1python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp11.0.0numpy1.22python3.10.____cpython:
-        CONFIG: osx_arm64_arrow_cpp11.0.0numpy1.22python3.10.____cpython
+      osx_arm64_arrow_cpp11.0.0python3.10.____cpython:
+        CONFIG: osx_arm64_arrow_cpp11.0.0python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp11.0.0numpy1.22python3.8.____cpython:
-        CONFIG: osx_arm64_arrow_cpp11.0.0numpy1.22python3.8.____cpython
+      osx_arm64_arrow_cpp11.0.0python3.11.____cpython:
+        CONFIG: osx_arm64_arrow_cpp11.0.0python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp11.0.0numpy1.22python3.9.____cpython:
-        CONFIG: osx_arm64_arrow_cpp11.0.0numpy1.22python3.9.____cpython
+      osx_arm64_arrow_cpp11.0.0python3.8.____cpython:
+        CONFIG: osx_arm64_arrow_cpp11.0.0python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp11.0.0numpy1.23python3.11.____cpython:
-        CONFIG: osx_arm64_arrow_cpp11.0.0numpy1.23python3.11.____cpython
+      osx_arm64_arrow_cpp11.0.0python3.9.____cpython:
+        CONFIG: osx_arm64_arrow_cpp11.0.0python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp12numpy1.22python3.10.____cpython:
-        CONFIG: osx_arm64_arrow_cpp12numpy1.22python3.10.____cpython
+      osx_arm64_arrow_cpp12python3.10.____cpython:
+        CONFIG: osx_arm64_arrow_cpp12python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp12numpy1.22python3.8.____cpython:
-        CONFIG: osx_arm64_arrow_cpp12numpy1.22python3.8.____cpython
+      osx_arm64_arrow_cpp12python3.11.____cpython:
+        CONFIG: osx_arm64_arrow_cpp12python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp12numpy1.22python3.9.____cpython:
-        CONFIG: osx_arm64_arrow_cpp12numpy1.22python3.9.____cpython
+      osx_arm64_arrow_cpp12python3.8.____cpython:
+        CONFIG: osx_arm64_arrow_cpp12python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp12numpy1.23python3.11.____cpython:
-        CONFIG: osx_arm64_arrow_cpp12numpy1.23python3.11.____cpython
+      osx_arm64_arrow_cpp12python3.9.____cpython:
+        CONFIG: osx_arm64_arrow_cpp12python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp13numpy1.22python3.10.____cpython:
-        CONFIG: osx_arm64_arrow_cpp13numpy1.22python3.10.____cpython
+      osx_arm64_arrow_cpp13python3.10.____cpython:
+        CONFIG: osx_arm64_arrow_cpp13python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp13numpy1.22python3.8.____cpython:
-        CONFIG: osx_arm64_arrow_cpp13numpy1.22python3.8.____cpython
+      osx_arm64_arrow_cpp13python3.11.____cpython:
+        CONFIG: osx_arm64_arrow_cpp13python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp13numpy1.22python3.9.____cpython:
-        CONFIG: osx_arm64_arrow_cpp13numpy1.22python3.9.____cpython
+      osx_arm64_arrow_cpp13python3.8.____cpython:
+        CONFIG: osx_arm64_arrow_cpp13python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_arrow_cpp13numpy1.23python3.11.____cpython:
-        CONFIG: osx_arm64_arrow_cpp13numpy1.23python3.11.____cpython
+      osx_arm64_arrow_cpp13python3.9.____cpython:
+        CONFIG: osx_arm64_arrow_cpp13python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
     maxParallel: 17
   timeoutInMinutes: 360
