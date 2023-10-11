@@ -9,7 +9,6 @@ source:
   url: https://github.com/duckdb/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 37a43188d9354ce3ca101b2b118d867f5f76d04c3b83c09d86fd7508351a631b
   patches:
-    - 0001-chore-skip-arrow-union-tests-on-pyarrow-11.patch
     - 0001-fix-arrowfs-skip-arrow-fs-test-on-windows.patch
 
 build:
