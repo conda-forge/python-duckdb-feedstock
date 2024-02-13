@@ -47,15 +47,11 @@ test:
     - pandas
   source_files:
     - tools/pythonpkg/tests
-  files:
-    - test_extension_install.py
   commands:
     - pip check
     # ppc64le/aarch64 is emulated and fails to run the test suite here
     # Skip slow tests to avoid memory issues in CI, skip stub tests that is fragile under new version of mypy
     - pytest tools/pythonpkg/tests --ignore=tools/pythonpkg/tests/slow/ --ignore=tools/pythonpkg/tests/stubs/  # [not (ppc64le or aarch64)]
-    # DuckDB not currently building extensions for linux-aarch64
-    - python test_extension_install.py  # [not (linux and aarch64)]
 
 about:
   home: https://www.duckdb.org/
