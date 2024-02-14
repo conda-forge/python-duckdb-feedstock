@@ -16,6 +16,7 @@ build:
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   script:
+    - export CFLAGS="$CXXFLAGS -mlongcall"  # [ppc64le]
     - export CXXFLAGS="$CXXFLAGS -mlongcall"  # [ppc64le]
     - {{ PYTHON }} -m pip install tools/pythonpkg -vv
 
