@@ -15,6 +15,7 @@ build:
   number: 0
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
+    - DISABLE_UNITY=1
 
 requirements:
   build:
