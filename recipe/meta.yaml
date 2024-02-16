@@ -10,6 +10,7 @@ source:
   sha256: 5a925b8607d00a97c1a3ffe6df05c0a62a4df063abd022ada82ac1e917792013
   patches:
     - 0001-fix-arrowfs-skip-arrow-fs-test-on-windows.patch
+    - 0001-disable-windows-restart-manager.patch
 
 build:
   number: 0
