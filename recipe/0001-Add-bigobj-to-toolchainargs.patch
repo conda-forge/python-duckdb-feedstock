@@ -1,0 +1,21 @@
+From 0dc94e18ee2ebe16641c344c45615e52da32903d Mon Sep 17 00:00:00 2001
+From: "Uwe L. Korn" <uwelk@xhochy.com>
+Date: Fri, 16 Feb 2024 22:03:47 +0100
+Subject: [PATCH] Add /bigobj to toolchainargs
+
+---
+ tools/pythonpkg/setup.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/tools/pythonpkg/setup.py b/tools/pythonpkg/setup.py
+index 21ce751..758daf4 100644
+--- a/tools/pythonpkg/setup.py
++++ b/tools/pythonpkg/setup.py
+@@ -175,6 +175,7 @@ if os.name == "nt":
+         "/wd26451",
+         "/wd26495",
+         "/D_CRT_SECURE_NO_WARNINGS",
++        "/bigobj",
+         "/utf-8",
+     ]
+ else:
