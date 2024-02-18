@@ -11,11 +11,12 @@ diff --git a/tools/pythonpkg/setup.py b/tools/pythonpkg/setup.py
 index 21ce751..758daf4 100644
 --- a/tools/pythonpkg/setup.py
 +++ b/tools/pythonpkg/setup.py
-@@ -175,6 +175,7 @@ if os.name == "nt":
+@@ -175,6 +175,8 @@ if os.name == "nt":
          "/wd26451",
          "/wd26495",
          "/D_CRT_SECURE_NO_WARNINGS",
 +        "/bigobj",
++        "/LTCG:OFF",
          "/utf-8",
      ]
  else:
