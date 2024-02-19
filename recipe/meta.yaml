@@ -15,6 +15,7 @@ source:
 
 build:
   number: 0
+  skip: true  # [not (win and py==39)]
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 
