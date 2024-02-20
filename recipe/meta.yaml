@@ -45,6 +45,9 @@ test:
     - fsspec
     - google-cloud-storage
     - pandas
+    # Remove again
+    - pytest<8
+    - pandas=2.0
   source_files:
     - tools/pythonpkg/tests
   files:
