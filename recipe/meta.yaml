@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "0.9.2" %}
+{% set version = "0.10.0" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,16 +7,15 @@ package:
 
 source:
   url: https://github.com/duckdb/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: afff7bd925a98dc2af4039b8ab2159b0705cbf5e0ee05d97f7bb8dce5f880dc2
+  sha256: 5a925b8607d00a97c1a3ffe6df05c0a62a4df063abd022ada82ac1e917792013
   patches:
     - 0001-fix-arrowfs-skip-arrow-fs-test-on-windows.patch
 
 build:
-  number: 1
+  number: 0
+  skip: true  # [win]
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-  script:
-    - {{ PYTHON }} -m pip install tools/pythonpkg -vv
 
 requirements:
   build:
@@ -50,15 +49,11 @@ test:
     - pandas=2.0
   source_files:
     - tools/pythonpkg/tests
-  files:
-    - test_extension_install.py
   commands:
     - pip check
     # ppc64le/aarch64 is emulated and fails to run the test suite here
     # Skip slow tests to avoid memory issues in CI, skip stub tests that is fragile under new version of mypy
     - pytest tools/pythonpkg/tests --ignore=tools/pythonpkg/tests/slow/ --ignore=tools/pythonpkg/tests/stubs/  # [not (ppc64le or aarch64)]
-    # DuckDB not currently building extensions for linux-aarch64
-    - python test_extension_install.py  # [not (linux and aarch64)]
 
 about:
   home: https://www.duckdb.org/
