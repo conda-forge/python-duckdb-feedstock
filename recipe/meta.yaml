@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/duckdb/duckdb.git
-  git_rev: c2ef0bc423b979c2efbdee1b80c5f2ee2bbee21f
+  git_rev: 20f2b91b7b08cc164f8a078cbc9b80df8a3142d8
   # url: https://github.com/duckdb/{{ name }}/archive/v{{ version }}.tar.gz
   # sha256: afff7bd925a98dc2af4039b8ab2159b0705cbf5e0ee05d97f7bb8dce5f880dc2
   patches:
