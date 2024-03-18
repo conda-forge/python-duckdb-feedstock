@@ -13,7 +13,6 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 
