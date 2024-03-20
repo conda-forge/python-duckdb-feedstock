@@ -12,7 +12,7 @@ source:
     - 0001-fix-arrowfs-skip-arrow-fs-test-on-windows.patch
 
 build:
-  number: 0
+  number: 1
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 
@@ -45,7 +45,6 @@ test:
     - pandas
     # Remove again
     - pytest<8
-    - pandas=2.0
   source_files:
     - tools/pythonpkg/tests
   commands:
