@@ -12,7 +12,7 @@ source:
     - 0001-fix-arrowfs-skip-arrow-fs-test-on-windows.patch
 
 build:
-  number: 2
+  number: 3
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 
@@ -23,6 +23,7 @@ requirements:
     - pybind11 >=2.6                         # [build_platform != target_platform]
     - setuptools_scm <7
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - pybind11 >=2.6
@@ -31,7 +32,6 @@ requirements:
     - setuptools_scm <7
   run:
     - python
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 test:
   imports:
