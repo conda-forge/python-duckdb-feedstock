@@ -61,9 +61,9 @@ outputs:
       requirements:
         run:
           - {{ pin_subpackage('python-duckdb', max_pin="x.x.x") }}
-      test:
-        imports:
-          - duckdb
+    test:
+      imports:
+        - duckdb
 
 
 about:
