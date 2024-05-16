@@ -56,7 +56,7 @@ outputs:
         - pytest tools/pythonpkg/tests --ignore=tools/pythonpkg/tests/slow/ --ignore=tools/pythonpkg/tests/stubs/  # [not (ppc64le or aarch64)]
   - name: {{ name|lower }}
     build:
-      noarch: generic
+      noarch: python
       skip: true  # [not linux64]
       requirements:
         run:
