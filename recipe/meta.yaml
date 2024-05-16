@@ -18,6 +18,8 @@ build:
 
 outputs:
   - name: python-{{ name|lower }}
+    script: build-duckdb.sh  # [unix]
+    script: build-duckdb.bat  # [win]
     requirements:
       build:
         - python                                 # [build_platform != target_platform]
