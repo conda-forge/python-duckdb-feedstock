@@ -60,9 +60,9 @@ outputs:
     build:
       noarch: generic
       skip: true  # [not linux64]
-      requirements:
-        run:
-          - {{ pin_subpackage('python-duckdb', max_pin="x.x.x") }}
+    requirements:
+      run:
+        - {{ pin_subpackage('python-duckdb', max_pin="x.x.x") }}
     test:
       imports:
         - duckdb
