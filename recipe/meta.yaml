@@ -62,7 +62,7 @@ outputs:
       skip: true  # [not linux64]
       requirements:
         run:
-          - python-duckdb {{ version }}
+          - {{ pin_subpackage('python-duckdb', max_pin="x.x.x") }}
     test:
       imports:
         - duckdb
