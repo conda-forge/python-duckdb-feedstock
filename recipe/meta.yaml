@@ -12,7 +12,7 @@ source:
     - 0001-fix-arrowfs-skip-arrow-fs-test-on-windows.patch
 
 build:
-  number: 0
+  number: 1
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 
@@ -65,9 +65,12 @@ outputs:
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
         - libcurl
+        - openssl
         - make  # [unix]
         - cmake
         - ninja
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
         - libcurl
         - libiconv
@@ -84,6 +87,7 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage('python-duckdb', max_pin="x.x.x") }}
+        - {{ pin_subpackage('duckdb-cli', max_pin="x.x.x") }}
     test:
       imports:
         - duckdb
