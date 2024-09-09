@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: python-{{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/duckdb/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 04e472e646f5cadd0a3f877a143610674b0d2bcf9f4102203ac3c3d02f1c5f26
+  sha256: d9be2c6d3a5ebe2b3d33044fb2cb535bb0bd972a27ae38c4de5e1b4caa4bf68d
   patches:
     - 0001-fix-arrowfs-skip-arrow-fs-test-on-windows.patch
 
