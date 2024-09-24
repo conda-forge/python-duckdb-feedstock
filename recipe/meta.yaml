@@ -25,7 +25,6 @@ outputs:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
         - pybind11 >=2.6                         # [build_platform != target_platform]
-        - setuptools_scm <7
         - {{ stdlib('c') }}
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
@@ -33,6 +32,7 @@ outputs:
         - pybind11 >=2.6
         - python
         - pip
+        - setuptools
         - setuptools_scm <7
       run:
         - python
