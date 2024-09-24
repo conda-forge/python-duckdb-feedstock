@@ -55,7 +55,7 @@ outputs:
         - pip check
         # ppc64le/aarch64 is emulated and fails to run the test suite here
         # Skip slow tests to avoid memory issues in CI, skip stub tests that is fragile under new version of mypy
-        - pytest tools/pythonpkg/tests --ignore=tools/pythonpkg/tests/slow/ --ignore=tools/pythonpkg/tests/stubs/  # [not (ppc64le or aarch64)]
+        - pytest -sv tools/pythonpkg/tests --ignore=tools/pythonpkg/tests/slow/ --ignore=tools/pythonpkg/tests/stubs/  # [not (ppc64le or aarch64)]
   - name: {{ name|lower }}
     build:
       noarch: generic
