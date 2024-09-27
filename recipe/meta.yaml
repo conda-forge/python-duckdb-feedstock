@@ -10,6 +10,10 @@ source:
   sha256: a764cef80287ccfd8555884d8facbe962154e7c747043c0842cd07873b4d6752
   patches:
     - 0001-fix-arrowfs-skip-arrow-fs-test-on-windows.patch
+    # https://github.com/duckdb/duckdb/pull/14113
+    - 0002-make-sure-the-GIL-is-released-when-the-connection-db.patch
+    - 0003-there-is-no-consequence-to-nesting-py-gil_scoped_acq.patch
+    - 0004-remove-some-dead-code-while-we-re-at-it.patch
 
 build:
   number: 0
