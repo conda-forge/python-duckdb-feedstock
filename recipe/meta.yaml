@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: python-{{ name|lower }}-split
@@ -7,9 +7,13 @@ package:
 
 source:
   url: https://github.com/duckdb/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 04e472e646f5cadd0a3f877a143610674b0d2bcf9f4102203ac3c3d02f1c5f26
+  sha256: a764cef80287ccfd8555884d8facbe962154e7c747043c0842cd07873b4d6752
   patches:
     - 0001-fix-arrowfs-skip-arrow-fs-test-on-windows.patch
+    # https://github.com/duckdb/duckdb/pull/14113
+    - 0002-make-sure-the-GIL-is-released-when-the-connection-db.patch
+    - 0003-there-is-no-consequence-to-nesting-py-gil_scoped_acq.patch
+    - 0004-remove-some-dead-code-while-we-re-at-it.patch
 
 build:
   number: 0
@@ -25,7 +29,6 @@ outputs:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
         - pybind11 >=2.6                         # [build_platform != target_platform]
-        - setuptools_scm <7
         - {{ stdlib('c') }}
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
@@ -33,6 +36,7 @@ outputs:
         - pybind11 >=2.6
         - python
         - pip
+        - setuptools
         - setuptools_scm <7
       run:
         - python
@@ -53,9 +57,11 @@ outputs:
         - tools/pythonpkg/tests
       commands:
         - pip check
+        # Ensure we output UTF-8 on windows
+        - set PYTHONIOENCODING=utf-8  # [win]
         # ppc64le/aarch64 is emulated and fails to run the test suite here
         # Skip slow tests to avoid memory issues in CI, skip stub tests that is fragile under new version of mypy
-        - pytest tools/pythonpkg/tests --ignore=tools/pythonpkg/tests/slow/ --ignore=tools/pythonpkg/tests/stubs/  # [not (ppc64le or aarch64)]
+        - pytest -sv tools/pythonpkg/tests --ignore=tools/pythonpkg/tests/slow/ --ignore=tools/pythonpkg/tests/stubs/  # [not (ppc64le or aarch64)]
   - name: {{ name|lower }}
     build:
       noarch: generic

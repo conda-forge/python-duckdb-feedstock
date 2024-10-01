@@ -1,0 +1,44 @@
+From b158c179cb9dd1df3c34f42c3703b3678e518478 Mon Sep 17 00:00:00 2001
+From: Tishj <t_b@live.nl>
+Date: Wed, 25 Sep 2024 14:27:53 +0200
+Subject: [PATCH 3/4] there is no consequence to nesting
+ py::gil_scoped_acquire, might as well use it liberally to ensure the gil is
+ held when a py::gil_scoped_release is encountered
+
+---
+ tools/pythonpkg/src/pyconnection.cpp | 2 ++
+ tools/pythonpkg/src/pyrelation.cpp   | 1 +
+ 2 files changed, 3 insertions(+)
+
+diff --git a/tools/pythonpkg/src/pyconnection.cpp b/tools/pythonpkg/src/pyconnection.cpp
+index 5f0c7aa..a958b50 100644
+--- a/tools/pythonpkg/src/pyconnection.cpp
++++ b/tools/pythonpkg/src/pyconnection.cpp
+@@ -416,6 +416,7 @@ void DuckDBPyConnection::Initialize(py::handle &m) {
+ }
+ 
+ shared_ptr<DuckDBPyConnection> DuckDBPyConnection::ExecuteMany(const py::object &query, py::object params_p) {
++	py::gil_scoped_acquire gil;
+ 	con.SetResult(nullptr);
+ 	if (params_p.is_none()) {
+ 		params_p = py::list();
+@@ -600,6 +601,7 @@ shared_ptr<DuckDBPyConnection> DuckDBPyConnection::ExecuteFromString(const strin
+ }
+ 
+ shared_ptr<DuckDBPyConnection> DuckDBPyConnection::Execute(const py::object &query, py::object params) {
++	py::gil_scoped_acquire gil;
+ 	con.SetResult(nullptr);
+ 
+ 	auto statements = GetStatements(query);
+diff --git a/tools/pythonpkg/src/pyrelation.cpp b/tools/pythonpkg/src/pyrelation.cpp
+index 3556459..b89a8e7 100644
+--- a/tools/pythonpkg/src/pyrelation.cpp
++++ b/tools/pythonpkg/src/pyrelation.cpp
+@@ -790,6 +790,7 @@ unique_ptr<QueryResult> DuckDBPyRelation::ExecuteInternal(bool stream_result) {
+ }
+ 
+ void DuckDBPyRelation::ExecuteOrThrow(bool stream_result) {
++	py::gil_scoped_acquire gil;
+ 	result.reset();
+ 	auto query_result = ExecuteInternal(stream_result);
+ 	if (!query_result) {
