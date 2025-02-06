@@ -15,6 +15,7 @@ build:
   number: 0
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
+    - JEMALLOC_SYS_WITH_LG_PAGE=16   # [aarch64 or ppc64le]
 
 outputs:
   - name: python-{{ name|lower }}
