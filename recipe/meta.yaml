@@ -49,7 +49,7 @@ outputs:
         - google-cloud-storage
         - pandas
         # Remove again
-        - pytest<8
+        - pytest <8
       source_files:
         - tools/pythonpkg/tests
       commands:
