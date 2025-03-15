@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: python-{{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/duckdb/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: f22c97e18c071fa8e43b5e150c03c6ab4bcc510cca6e6b50cbe13af8535fa701
+  sha256: 481a05d59cb8eaf4d78e5495ab0c99ed53e3b41e84aeaf24eef4144f2c60d1cc
   patches:
     - 0001-fix-arrowfs-skip-arrow-fs-test-on-windows.patch
 
@@ -49,7 +49,7 @@ outputs:
         - google-cloud-storage
         - pandas
         # Remove again
-        - pytest<8
+        - pytest <8
       source_files:
         - tools/pythonpkg/tests
       commands:
