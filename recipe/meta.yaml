@@ -50,6 +50,7 @@ outputs:
         - pandas
         # Remove again
         - pytest <8
+        - pytest-reraise
       source_files:
         - tools/pythonpkg/tests
       commands:
