@@ -14,6 +14,6 @@ if [[ "$target_platform" == "linux-aarch64" ]]; then
   export CXXFLAGS="${CXXFLAGS} -pthread"
 fi
 
-export OVERRIDE_GIT_DESCRIBE=v$PKG_VERSION-0-2063dda
+export OVERRIDE_GIT_DESCRIBE=v$PKG_VERSION-0-g2063dda
 
 ${PYTHON} -m pip install --no-deps --no-build-isolation tools/pythonpkg -vv
