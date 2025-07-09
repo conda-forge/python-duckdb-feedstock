@@ -8,8 +8,8 @@ if [[ "$target_platform" == "linux-ppc64le" ]]; then
   export CXXFLAGS="$(echo ${CXXFLAGS} | sed 's/-fno-plt//g') -fplt"
 fi
 
-if [[ "$target_platform" == "linux-aarch64" ]]; then
-  # linux_aarch64 with the jemalloc extension has trouble finding pthread symbols
+if [[ "$target_platform" == "linux-aarch64" || "$target_platform" == "linux-ppc64le" ]]; then
+  # jemalloc extension on aarch64/ppc64le needs pthread symbols
   export CFLAGS="${CFLAGS} -pthread"
   export CXXFLAGS="${CXXFLAGS} -pthread"
 fi

@@ -11,6 +11,7 @@ source:
   sha256: a10b388e516f6d9cc5d571fa55f14c936b73a2ca17400a76aae6c3f1cc2e20cb
   patches:
     - 0001-fix-arrowfs-skip-arrow-fs-test-on-windows.patch
+    - 0002-Add-ppc64le-spin-wait-instruction.patch
 
 build:
   number: 0
