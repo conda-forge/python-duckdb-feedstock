@@ -1,6 +1,6 @@
 {% set name = "duckdb" %}
 # Please also set OVERRIDE_GIT_DESCRIBE in build-duckdb.{sh,bat}
-{% set version = "1.4.0" %}
+{% set version = "1.4.1" %}
 
 package:
   name: python-{{ name|lower }}-split
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bd5edee8bd5a73b5822f2b390668597b5fcdc2d3292c244d8d933bb87ad6ac4c
+  sha256: f903882f045d057ebccad12ac69975952832edfe133697694854bb784b8d6c76
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: python-{{ name|lower }}
