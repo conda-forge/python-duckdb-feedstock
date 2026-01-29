@@ -1,5 +1,4 @@
 {% set name = "duckdb" %}
-# Please also set OVERRIDE_GIT_DESCRIBE in build-duckdb.{sh,bat}
 {% set version = "1.4.4" %}
 
 package:

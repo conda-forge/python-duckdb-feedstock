@@ -16,7 +16,6 @@ if [[ "$target_platform" == "linux-aarch64" || "$target_platform" == "linux-ppc6
 fi
 
 
-# export OVERRIDE_GIT_DESCRIBE=v$PKG_VERSION-0-gb8a06e4
 export CMAKE_GENERATOR=Ninja
 
 ${PYTHON} -m pip install --no-deps --no-build-isolation -vv .
