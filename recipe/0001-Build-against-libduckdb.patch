@@ -1,0 +1,28 @@
+From d5e6267b66de2d396ae8a37f8a3251a4d38a2f58 Mon Sep 17 00:00:00 2001
+From: "Uwe L. Korn" <uwe.korn@quantco.com>
+Date: Fri, 6 Feb 2026 20:10:28 +0100
+Subject: [PATCH] Build against libduckdb
+
+---
+ CMakeLists.txt | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ab9e1ce..d55c78c 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -44,7 +44,13 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+ else()
+   duckdb_configure_for_release()
+ endif()
+-duckdb_add_library(duckdb_target)
++# duckdb_add_library(duckdb_target)
++add_library(duckdb_target SHARED IMPORTED)
++set_property(TARGET duckdb_target PROPERTY
++	IMPORTED_LOCATION "$ENV{PREFIX}/lib/libduckdb.dylib")
++include_directories($ENV{PREIFX}/include)
++include_directories(external/duckdb/third_party/fmt/include)
++include_directories(external/duckdb/third_party/utf8proc/include)
+ 
+ # Bundle in INTERFACE library
+ add_library(_duckdb_dependencies INTERFACE)
