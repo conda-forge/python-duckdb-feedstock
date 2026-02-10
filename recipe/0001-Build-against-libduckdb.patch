@@ -19,7 +19,7 @@ index ab9e1ce..d55c78c 100644
 +# duckdb_add_library(duckdb_target)
 +add_library(duckdb_target SHARED IMPORTED)
 +set_property(TARGET duckdb_target PROPERTY
-+	IMPORTED_LOCATION "$ENV{PREFIX}/lib/libduckdb.dylib")
++	IMPORTED_LOCATION "$ENV{PREFIX}/lib/libduckdb$ENV{SHLIB_EXT}")
 +include_directories($ENV{PREIFX}/include)
 +include_directories(external/duckdb/third_party/fmt/include)
 +include_directories(external/duckdb/third_party/utf8proc/include)
