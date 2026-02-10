@@ -8,9 +8,11 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 8bba52fd2acb67668a4615ee17ee51814124223de836d9e2fdcbc4c9021b3d3c
+  patches:
+    - 0001-Build-against-libduckdb.patch
 
 build:
-  number: 0
+  number: 3
 
 outputs:
   - name: python-{{ name|lower }}
@@ -33,16 +35,22 @@ outputs:
         - pip
         - setuptools
         - setuptools_scm >=8
+        - libduckdb-devel {{ version }}.* *_{{ PKG_BUILDNUM }}
       run:
         - python
+        - libduckdb {{ version }}.* *_{{ PKG_BUILDNUM }}
 
     test:
       imports:
         - duckdb
       requires:
         - pip
+        - duckdb-extension-httpfs
       commands:
         - pip check
+        - python -c "import duckdb; print(duckdb.sql(\"SELECT * FROM duckdb_settings() where name LIKE 'extension%'\").fetchall())"
+        - python -c 'import duckdb; print(duckdb.sql("SELECT * FROM duckdb_extensions()").fetchall())'
+        - 'python -c ''import duckdb; con = duckdb.connect(config={"allow_unsigned_extensions": "true"}); con.load_extension("httpfs")'''
   - name: {{ name|lower }}
     build:
       noarch: generic
