@@ -1,5 +1,5 @@
 {% set name = "duckdb" %}
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 
 package:
   name: python-{{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b370d1620a34a4538ef66524fcee9de8171fa263c701036a92bc0b4c1f2f9c6d
+  sha256: 638da0d5102b6cb6f7d47f83d0600708ac1d3cb46c5e9aaabc845f9ba4d69246
 
 build:
   number: 0
