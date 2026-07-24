@@ -4,10 +4,9 @@ azure:
       SET_PAGEFILE: 'True'
 bot:
   automerge: true
-build_platform:
-  linux_aarch64: linux_64
-  linux_ppc64le: linux_64
-  osx_arm64: osx_64
+provider:
+  linux_aarch64: default
+  osx_arm64: default
 conda_build:
   pkg_format: '2'
 conda_forge_output_validation: true
