@@ -69,7 +69,6 @@ about:
   dev_url: https://github.com/duckdb/duckdb
 
 extra:
-  feedstock-name: python-duckdb
   recipe-maintainers:
     - jonashaag
     - sugatoray
