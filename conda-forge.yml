@@ -1,7 +1,3 @@
-azure:
-  settings_win:
-    variables:
-      SET_PAGEFILE: 'True'
 bot:
   automerge: true
 provider:
@@ -15,3 +11,7 @@ github:
   branch_name: main
   tooling_branch_name: main
 test: native_and_emulated
+workflow_settings:
+  pagefile_size:
+    - os: win
+      value: 16
