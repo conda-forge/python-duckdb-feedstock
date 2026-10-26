@@ -70,6 +70,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - flaviomartins
     - sugatoray
     - dhirschfeld
     - xhochy
