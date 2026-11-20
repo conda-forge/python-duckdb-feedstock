@@ -300,6 +300,7 @@ Feedstock Maintainers
 =====================
 
 * [@dhirschfeld](https://github.com/dhirschfeld/)
+* [@flaviomartins](https://github.com/flaviomartins/)
 * [@gforsyth](https://github.com/gforsyth/)
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
 * [@sugatoray](https://github.com/sugatoray/)
